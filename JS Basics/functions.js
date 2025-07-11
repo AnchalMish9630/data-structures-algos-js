@@ -37,8 +37,11 @@ console.log(user);
 
 const cart=["shirt", "dhoti","kurta"]
 const pr = createOrder (cart);
-pr.then(function(){
-   console.log("print", cart)
+pr.then(function(orderId){
+   console.log("print", orderId)
+})
+.catch(function(err){
+    console.log(err)
 })
 
 function createOrder (cart){
@@ -49,7 +52,10 @@ function createOrder (cart){
         }
         const orderId = "1233"
         if(orderId){
-            resolve(orderId)
+            setTimeout(()=>{
+ resolve(orderId)
+            },8000)
+           
         }
     })
     return pr;
@@ -57,6 +63,6 @@ function createOrder (cart){
 }
 
 function validCart(cart){
-    return true
+    return false
 }
 
