@@ -1,8 +1,5 @@
 /**
  * Linear Search Function
- * @param {number[]} arr - The array to search in
- * @param {number} target - The value to search for
- * @return {number} - Index of the target element or -1 if not found
  */
 function linearSearch(arr, target) {
     for (let i = 0; i < arr.length; i++) {
@@ -10,7 +7,9 @@ function linearSearch(arr, target) {
             return i; // Found at index i
         }
     }
-    return -1; // Not found
+    return -1; // Not found // 
+    // wll put this after loop otherwise first time condition false hone pr hi -1 aa jayega , 
+    // that's why return -1 in the last.so that when loops end and no value maths then only retun -1
 }
 
 // Example usage:
