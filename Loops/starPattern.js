@@ -123,3 +123,106 @@ for (let i = 0; i < num; i++) {
     }
     console.log(row);
 }
+
+
+
+
+//      *    
+//     ***   
+//    *****  
+//   ******* 
+//  *********
+//  *********     
+//   *******    
+//    *****   
+//     ***  
+//      * 
+
+
+
+// Function to print the top half of a diamond (pyramid shape)
+function printloop(n) {
+   for (let i = 0; i < n; i++) {
+      let row = ""
+      
+      // Add leading spaces
+      for (let j = 0; j < n - (i + 1); j++) {
+         row = row + " "
+      }
+
+      // Add stars for current row
+      for (let k = 0; k < (2 * i + 1); k++) {
+         row = row + "*"
+      }
+
+      // Add trailing spaces (optional for symmetry)
+      for (let j = 0; j < n - i - 1; j++) {
+         row = row + " "
+      }
+
+      console.log(row)
+   }
+}
+
+// Function to print the bottom half of a diamond (inverted pyramid)
+function printloop2(n) {
+   for (let i = 0; i < n; i++) {
+      let row = ""
+
+      // Add leading spaces
+      for (let j = 0; j < i; j++) {
+         row = row + " "
+      }
+
+      // Add stars for current row
+      for (let k = 0; k < (2 * n - (2 * i + 1)); k++) {
+         row = row + "*"
+      }
+
+      // Add trailing spaces (optional for symmetry)
+      for (let j = 0; j < n - i; j++) {
+         row = row + " "
+      }
+
+      console.log(row)
+   }
+}
+
+// Call both functions to print full diamond pattern (with center row repeated)
+printloop(5);
+printloop2(5);
+
+
+
+function print(n) {
+   let space = 2 * (n - 1);
+   for (let i = 0; i < n; i++) {
+      let row = "";
+      for (let j = 1; j <= i + 1; j++) {
+         row = row + j;
+      }
+      for (let k = 0; k < space; k++) {
+         row = row + "_"
+      }
+      for (let k = i + 1; k >= 1; k--) {
+         row = row + k
+      }
+      console.log(row)
+      space = space - 2
+   }
+
+}
+print(5)
+
+
+// Console
+//  1        1
+//  12      21
+//  123    321
+//  1234  4321
+//  1234554321
+
+
+
+
+
