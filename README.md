@@ -83,3 +83,10 @@ feat(arrays): Add second largest element solution
 Frontend Engineer | React | JavaScript | DSA Learner  
 📫 [Connect on LinkedIn](https://www.linkedin.com/in/anchalmishra0906/) 
 ---
+
+
+
+Imp:
+
+# If we console the function call and function returns nothing then we will get "Undefined" as function is returning nothing.
+
